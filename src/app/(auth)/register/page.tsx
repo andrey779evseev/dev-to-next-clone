@@ -12,12 +12,15 @@ export default function RegisterPage() {
 				</span>
 				<GoogleAuthButton />
 				<GithubAuthButton />
-				<div className='mt-4 relative w-full text-center'>
-					<div className='bg-gray-300 absolute w-full top-1/2 h-[2px]'/>
-          <span className='relative text-sm text-gray-700 max-w-[75%] bg-white px-2'>
-            Already have an account?
-            <Link href='/login' className='text-blue'> Log in.</Link>
-          </span>
+				<div className='relative mt-4 w-full text-center'>
+					<div className='absolute top-1/2 h-[2px] w-full bg-gray-300' />
+					<span className='relative max-w-[75%] bg-white px-2 text-sm text-gray-700'>
+						Already have an account?
+						<Link href='/login' className='text-blue'>
+							{' '}
+							Log in.
+						</Link>
+					</span>
 				</div>
 			</div>
 		</div>
