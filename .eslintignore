@@ -1,0 +1,7 @@
+.next
+.vscode
+node_modules
+prisma
+.env
+yarn.lock
+pnpm-lock.yaml
