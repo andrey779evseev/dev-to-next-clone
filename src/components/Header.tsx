@@ -30,12 +30,7 @@ export default function Header() {
 							name='q'
 							autoComplete='off'
 							aria-label='Search term'
-							className={clsx(
-								'transition-color h-full w-full rounded-md border-1.5 border-gray-300 bg-white px-2 py-[6px] text-dark outline-none transition-all',
-								'placeholder:font-normal placeholder:text-gray-600',
-								'hover:border-gray-400',
-								'focus:border-blue focus:shadow-border focus:shadow-blue'
-							)}
+							className='input'
 							placeholder='Search...'
 						/>
 						<button

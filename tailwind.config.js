@@ -25,6 +25,7 @@ module.exports = {
 			},
 			blue: {
 				DEFAULT: 'rgb(59, 73, 223)',
+				darker: 'rgb(47, 58, 178)',
 			},
 		},
 	},
