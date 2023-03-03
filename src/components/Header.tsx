@@ -1,6 +1,7 @@
-import clsx from 'clsx'
 import Image from 'next/image'
 import Link from 'next/link'
+import LoginButton from './auth/LoginButton'
+import RegisterButton from './auth/RegisterButton'
 import SearchIcon from './common/icons/SearchIcon'
 
 export default function Header() {
@@ -34,31 +35,17 @@ export default function Header() {
 							placeholder='Search...'
 						/>
 						<button
-							className='py-auto group absolute top-0 right-0 h-full cursor-pointer rounded-md border-none px-2 outline-none transition-colors hover:bg-blue/10'
+							className='py-auto absolute top-0 right-0 h-full border-none px-2 outline-none link !text-gray-800'
 							type='submit'
 							aria-label='Search'
 						>
-							<SearchIcon className='text-dark group-hover:text-blue' />
+							<SearchIcon className='' />
 						</button>
 					</form>
 				</div>
 				<div className='flex items-center gap-2'>
-					<Link
-						href='/login'
-						className='group group cursor-pointer rounded-md border-none px-4 py-2 outline-none transition-colors hover:bg-blue/10'
-					>
-						<span className='whitespace-nowrap text-gray-700 transition-all group-hover:text-blue group-hover:underline'>
-							Log in
-						</span>
-					</Link>
-					<Link
-						href='/register'
-						className='group group cursor-pointer rounded-md border border-blue px-4 py-2 outline-none transition-colors hover:bg-blue'
-					>
-						<span className='whitespace-nowrap text-blue transition-all group-hover:text-white group-hover:underline'>
-							Create account
-						</span>
-					</Link>
+					<LoginButton />
+					<RegisterButton />
 				</div>
 			</div>
 		</header>

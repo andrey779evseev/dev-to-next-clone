@@ -5,7 +5,7 @@ import Link from 'next/link'
 export default function LoginPage() {
 	return (
 		<div className='flex items-center justify-center p-4'>
-			<div className='mx-auto w-[640px] rounded-md bg-white p-12 text-dark shadow-border shadow-dark/10'>
+			<div className='card-white mx-auto w-[640px] p-12 text-dark'>
 				<OAuth />
 				<div className='relative my-4 w-full text-center'>
 					<div className='absolute top-1/2 h-[2px] w-full bg-gray-300' />
@@ -18,7 +18,7 @@ export default function LoginPage() {
 					Continue
 				</button>
 				<div className='mt-7 text-center'>
-					<Link href='#' className='text-sm text-blue cursor-pointer'>
+					<Link href='#' className='cursor-pointer text-sm text-blue'>
 						I forgot my password
 					</Link>
 				</div>

@@ -1,5 +1,5 @@
-import GithubAuthButton from './GithubAuthButton';
-import GoogleAuthButton from './GoogleAuthButton';
+import GithubAuthButton from './GithubAuthButton'
+import GoogleAuthButton from './GoogleAuthButton'
 
 export default function OAuth() {
 	return (

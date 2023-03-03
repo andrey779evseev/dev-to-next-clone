@@ -3,13 +3,13 @@ import clsx from 'clsx'
 import { useState } from 'react'
 
 type PropsType = {
-  value: boolean
-  setValue: (value: boolean) => void
+	value: boolean
+	setValue: (value: boolean) => void
 }
 
-export default function Checkbox (props: PropsType) {
-  const {value, setValue} = props
-	
+export default function Checkbox(props: PropsType) {
+	const { value, setValue } = props
+
 	return (
 		<div
 			className='inline-flex cursor-pointer select-none items-center gap-2 rounded-md px-1 transition-all hover:bg-gray-100 hover:shadow-[0_0_0_4px_] hover:shadow-gray-100'
@@ -34,8 +34,8 @@ export default function Checkbox (props: PropsType) {
 						xmlns='http://www.w3.org/2000/svg'
 					>
 						<path
-							fill-rule='evenodd'
-							clip-rule='evenodd'
+							fillRule='evenodd'
+							clipRule='evenodd'
 							d='M11.157.933a.75.75 0 01.077 1.058L4.817 9.407a.75.75 0 01-1.134 0L.766 6.037a.75.75 0 011.135-.982L4.25 7.77l5.85-6.76a.75.75 0 011.057-.077z'
 							fill='#fff'
 						/>
