@@ -1,1 +1,2 @@
-### Still in development
+### Still in development, early development stage
+
