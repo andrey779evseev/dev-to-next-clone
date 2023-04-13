@@ -7,12 +7,15 @@
 		@apply h-full min-h-[40px] w-full rounded-md border-1.5 border-gray-300 bg-white px-2 py-[6px] text-dark outline-none transition-all duration-200 placeholder:font-normal placeholder:text-gray-600 hover:border-gray-400 focus:border-blue focus:shadow-border focus:shadow-blue;
 	}
 	.card-gray {
-		@apply rounded-md bg-gray-50 shadow-border shadow-dark/5;
+		@apply overflow-hidden rounded-md border border-dark/5 bg-gray-50;
 	}
 	.card-white {
-		@apply rounded-md bg-white shadow-border shadow-dark/10;
+		@apply overflow-hidden rounded-md border border-dark/10 bg-white;
 	}
 	.link {
 		@apply cursor-pointer rounded-md text-gray-700 transition-all hover:bg-blue/10 hover:!text-blue-darker hover:underline;
+	}
+	.ghost-btn {
+		@apply w-fit cursor-pointer rounded-md text-base-80 transition-colors hover:bg-black/5 hover:text-base-100;
 	}
 }

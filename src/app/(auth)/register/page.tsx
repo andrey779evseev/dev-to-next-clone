@@ -1,5 +1,5 @@
-import OAuth from '@/components/auth/OAuth'
 import Link from 'next/link'
+import OAuth from '@/components/auth/OAuth'
 
 export default function RegisterPage() {
 	return (

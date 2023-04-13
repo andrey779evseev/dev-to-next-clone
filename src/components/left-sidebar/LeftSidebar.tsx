@@ -1,12 +1,12 @@
+import LoginButton from '@/components/auth/LoginButton'
+import RegisterButton from '@/components/auth/RegisterButton'
+import NavbarLinks from '@/components/left-sidebar/NavbarLinks'
+import PopularTags from '@/components/left-sidebar/PopularTags'
+import SidebarSocials from '@/components/left-sidebar/SidebarSocials'
 import Image from 'next/image'
 import Link from 'next/link'
-import LoginButton from '../auth/LoginButton'
-import RegisterButton from '../auth/RegisterButton'
-import NavbarLinks from './NavbarLinks'
-import PopularTags from './PopularTags'
-import SidebarSocials from './SidebarSocials'
 
-export default function Sidebar() {
+export default function LeftSidebar() {
 	return (
 		<aside>
 			<div className='card-gray p-4'>
@@ -35,12 +35,9 @@ export default function Sidebar() {
 						alt='question'
 						className='mb-5 h-auto w-full'
 					/>
-          <Link
-            href='/register'
-            className='text-blue underline text-xl'
-          >
-            Create An Account on DEV
-          </Link>
+					<Link href='/register' className='text-xl text-blue underline'>
+						Create An Account on DEV
+					</Link>
 				</div>
 			</div>
 		</aside>

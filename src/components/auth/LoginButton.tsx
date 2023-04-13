@@ -1,23 +1,20 @@
-import clsx from 'clsx'
 import Link from 'next/link'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
-  full?: boolean
+	full?: boolean
 }
 
 export default function LoginButton(props: PropsType) {
-  const {full = false} = props
+	const { full = false } = props
 	return (
 		<Link
 			href='/login'
-			className={clsx(
-        'border-none px-4 py-2 outline-none link text-center',
-        {'w-full': full}
-      )}
+			className={cn('link border-none px-4 py-2 text-center outline-none', {
+				'w-full': full,
+			})}
 		>
-			<span className='whitespace-nowrap'>
-				Log in
-			</span>
+			<span className='whitespace-nowrap'>Log in</span>
 		</Link>
 	)
 }

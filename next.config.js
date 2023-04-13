@@ -4,6 +4,26 @@ const nextConfig = {
 		appDir: true,
 		serverComponentsExternalPackages: ['@prisma/client', 'openid-client'],
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'res.cloudinary.com',
+				port: '',
+				pathname: '/practicaldev/image/fetch/**',
+			},
+		],
+	},
+	// images: {
+	// 	remotePatterns: [
+	// 		{
+	// 			protocol: 'https',
+	// 			hostname: 'res.cloudinary.com',
+	// 			port: '',
+	// 			pathname: '/**',
+	// 		},
+	// 	],
+	// },
 }
 
 module.exports = nextConfig

@@ -14,16 +14,17 @@ module.exports = {
 			transparent: 'transparent',
 			current: 'currentColor',
 			dark: 'rgb(23, 23, 23)',
+			black: 'rgb(0, 0, 0)',
 			white: 'rgb(255, 255, 255)',
 			gray: {
-        50: 'rgb(250, 250, 250)',
+				50: 'rgb(250, 250, 250)',
 				100: 'rgb(245, 245, 245)',
 				200: 'rgb(229, 229, 229)',
 				300: 'rgb(212, 212, 212)',
 				400: 'rgb(163, 163, 163)',
 				600: 'rgb(82, 82, 82)',
 				700: 'rgb(64, 64, 64)',
-        800: 'rgb(38, 38, 38)'
+				800: 'rgb(38, 38, 38)',
 			},
 			blue: {
 				DEFAULT: 'rgb(59, 73, 223)',

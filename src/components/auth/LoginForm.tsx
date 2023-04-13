@@ -1,6 +1,7 @@
 'use client'
+
+import Checkbox from '@/components/common/Checkbox'
 import { useState } from 'react'
-import Checkbox from '../common/Checkbox'
 
 export default function LoginForm() {
 	const [email, setEmail] = useState('')

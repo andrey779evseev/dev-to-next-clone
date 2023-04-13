@@ -1,6 +1,6 @@
 'use client'
-import clsx from 'clsx'
-import { useState } from 'react'
+
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	value: boolean
@@ -16,14 +16,14 @@ export default function Checkbox(props: PropsType) {
 			onClick={() => setValue(!value)}
 		>
 			<div
-				className={clsx(
+				className={cn(
 					'relative h-[18px] w-[18px] rounded-md border-1.5 border-gray-300 transition-all',
 					{ '!border-blue': value }
 				)}
 			>
 				<div
-					className={clsx(
-						'invisible absolute top-0 left-0 flex h-full w-full items-center justify-center bg-blue opacity-0 transition-all',
+					className={cn(
+						'invisible absolute left-0 top-0 flex h-full w-full items-center justify-center bg-blue opacity-0 transition-all',
 						{ '!visible !opacity-100': value }
 					)}
 				>

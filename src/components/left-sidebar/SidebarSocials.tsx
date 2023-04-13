@@ -1,10 +1,9 @@
+import FacebookIcon from '@/components/common/icons/socials/FacebookIcon'
+import GithubIcon from '@/components/common/icons/socials/GithubIcon'
+import InstagramIcon from '@/components/common/icons/socials/InstagramIcon'
+import TwitchIcon from '@/components/common/icons/socials/TwitchIcon'
+import TwitterIcon from '@/components/common/icons/socials/TwitterIcon'
 import Link from 'next/link'
-import FacebookIcon from '../common/icons/socials/FacebookIcon'
-import GithubIcon from '../common/icons/socials/GithubIcon'
-import InstagramIcon from '../common/icons/socials/InstagramIcon'
-import TwitchIcon from '../common/icons/socials/TwitchIcon'
-import TwitterIcon from '../common/icons/socials/TwitterIcon'
-
 
 const socials = [
 	{
@@ -31,13 +30,9 @@ const socials = [
 
 export default function SidebarSocials() {
 	return (
-		<div className='flex mb-4'>
+		<div className='mb-4 flex'>
 			{socials.map((social, i) => (
-				<Link
-					href={social.link}
-					className='mx-1 h-10 w-10 p-2 link'
-					key={i}
-				>
+				<Link href={social.link} className='link mx-1 h-10 w-10 p-2' key={i}>
 					{social.icon}
 				</Link>
 			))}

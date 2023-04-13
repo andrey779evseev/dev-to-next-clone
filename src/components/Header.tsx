@@ -6,7 +6,7 @@ import SearchIcon from './common/icons/SearchIcon'
 
 export default function Header() {
 	return (
-		<header className='fixed top-0 left-0 right-0 z-50 h-14 bg-white shadow-[0_1px_1px_rgb(0_0_0_/_10%)]'>
+		<header className='fixed inset-x-0 top-0 z-50 h-14 bg-white shadow-[0_1px_1px_rgb(0_0_0_/_10%)]'>
 			<div className='m-auto flex h-14 max-w-[1280px] items-center px-4'>
 				<div className='flex w-full items-center'>
 					<Link href='/'>
@@ -35,7 +35,7 @@ export default function Header() {
 							placeholder='Search...'
 						/>
 						<button
-							className='py-auto absolute top-0 right-0 h-full border-none px-2 outline-none link !text-gray-800'
+							className='link absolute right-0 top-0 h-full border-none px-2 !text-gray-800 outline-none'
 							type='submit'
 							aria-label='Search'
 						>

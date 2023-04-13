@@ -1,5 +1,5 @@
-import clsx from 'clsx'
 import Link from 'next/link'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	full?: boolean
@@ -10,8 +10,8 @@ export default function RegisterButton(props: PropsType) {
 	return (
 		<Link
 			href='/register'
-			className={clsx(
-				'group group cursor-pointer rounded-md border border-blue px-4 py-2 text-center outline-none transition-colors hover:bg-blue',
+			className={cn(
+				'group cursor-pointer rounded-md border border-blue px-4 py-2 text-center outline-none transition-colors hover:bg-blue',
 				{ 'w-full': full }
 			)}
 		>

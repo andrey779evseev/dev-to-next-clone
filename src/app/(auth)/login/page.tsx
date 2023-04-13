@@ -1,6 +1,6 @@
+import Link from 'next/link'
 import LoginForm from '@/components/auth/LoginForm'
 import OAuth from '@/components/auth/OAuth'
-import Link from 'next/link'
 
 export default function LoginPage() {
 	return (
@@ -14,7 +14,7 @@ export default function LoginPage() {
 					</span>
 				</div>
 				<LoginForm />
-				<button className='mt-3 w-full rounded-md bg-blue py-3 px-5 text-center font-medium text-white outline-none transition-colors hover:bg-blue-darker'>
+				<button className='mt-3 w-full rounded-md bg-blue px-5 py-3 text-center font-medium text-white outline-none transition-colors hover:bg-blue-darker'>
 					Continue
 				</button>
 				<div className='mt-7 text-center'>
