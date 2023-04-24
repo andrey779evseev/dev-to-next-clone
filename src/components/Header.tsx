@@ -1,10 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import LoginButton from './auth/LoginButton'
-import RegisterButton from './auth/RegisterButton'
 import SearchIcon from './common/icons/SearchIcon'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs/app-beta'
+import LoginButton from '@/components/auth/LoginButton'
+import RegisterButton from '@/components/auth/RegisterButton'
 
-export default function Header() {
+export default async function Header() {
 	return (
 		<header className='fixed inset-x-0 top-0 z-50 h-14 bg-white shadow-[0_1px_1px_rgb(0_0_0_/_10%)]'>
 			<div className='m-auto flex h-14 max-w-[1280px] items-center px-4'>
@@ -43,10 +44,15 @@ export default function Header() {
 						</button>
 					</form>
 				</div>
-				<div className='flex items-center gap-2'>
-					<LoginButton />
-					<RegisterButton />
-				</div>
+				<SignedOut>
+					<div className='flex items-center gap-2'>
+						<LoginButton />
+						<RegisterButton />
+					</div>
+				</SignedOut>
+				<SignedIn>
+					<UserButton afterSignOutUrl='/login' />
+				</SignedIn>
 			</div>
 		</header>
 	)

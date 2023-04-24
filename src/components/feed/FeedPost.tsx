@@ -48,7 +48,7 @@ export default function FeedPost(props: PropsType) {
 						Nicolas Frankel
 					</div>
 					<div className='mb-2 text-xs text-gray-600'>Apr 13</div>
-					<h2 className='mb-1 text-3xl font-bold text-dark'>
+					<h2 className='mb-1 cursor-pointer text-3xl font-bold text-dark transition-colors hover:text-blue-darker'>
 						The importance of rel=canonical for content writers
 					</h2>
 					<div className='-ml-0.5 mb-2 flex flex-wrap gap-px'>
