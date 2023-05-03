@@ -1,13 +1,14 @@
 'use client'
 
 import { cn } from '@/utils/cn'
+import { memo } from 'react'
 
 type PropsType = {
 	value: boolean
 	setValue: (value: boolean) => void
 }
 
-export default function Checkbox(props: PropsType) {
+const Checkbox = (props: PropsType) => {
 	const { value, setValue } = props
 
 	return (
@@ -46,3 +47,5 @@ export default function Checkbox(props: PropsType) {
 		</div>
 	)
 }
+
+export default memo(Checkbox)

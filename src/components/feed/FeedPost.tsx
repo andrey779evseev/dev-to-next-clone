@@ -3,20 +3,21 @@ import CommentIcon from '@/components/common/icons/CommentIcon'
 import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
 import If from '@/components/common/If'
 import { cn } from '@/utils/cn'
+import Link from 'next/link'
 
 const reactions = [
-	'https://dev.to/assets/fire-f60e7a582391810302117f987b22a8ef04a2fe0df7e3258a5f49332df1cec71e.svg',
-	'https://dev.to/assets/raised-hands-74b2099fd66a39f2d7eed9305ee0f4553df0eb7b4f11b01b6b1b499973048fe5.svg',
-	'https://dev.to/assets/exploding-head-daceb38d627e6ae9b730f36a1e390fca556a4289d5a41abb2c35068ad3e2c4b5.svg',
-	'https://dev.to/assets/multi-unicorn-b44d6f8c23cdd00964192bedc38af3e82463978aa611b4365bd33a0f1f4f3e97.svg',
-	'https://dev.to/assets/sparkle-heart-5f9bee3767e18deb1bb725290cb151c25234768a0e9a2bd39370c382d02920cf.svg',
+	'/icons/reactions/fire.svg',
+	'/icons/reactions/raised-hands.svg',
+	'/icons/reactions/exploding-head.svg',
+	'/icons/reactions/unicorn.svg',
+	'/icons/reactions/heart.svg',
 ]
 
 type PropsType = {
 	withImage?: boolean
 }
 
-export default function FeedPost(props: PropsType) {
+export default async function FeedPost(props: PropsType) {
 	const { withImage = false } = props
 
 	return (
@@ -48,9 +49,11 @@ export default function FeedPost(props: PropsType) {
 						Nicolas Frankel
 					</div>
 					<div className='mb-2 text-xs text-gray-600'>Apr 13</div>
-					<h2 className='mb-1 cursor-pointer text-3xl font-bold text-dark transition-colors hover:text-blue-darker'>
-						The importance of rel=canonical for content writers
-					</h2>
+					<Link href={`/${'malifor'}/${'first'}`}>
+						<h2 className='mb-1 cursor-pointer text-3xl font-bold text-dark transition-colors hover:text-blue-darker'>
+							The importance of rel=canonical for content writers
+						</h2>
+					</Link>
 					<div className='-ml-0.5 mb-2 flex flex-wrap gap-px'>
 						{['seo', 'content', 'contentwriting'].map((tag, i) => (
 							<span
@@ -85,14 +88,14 @@ export default function FeedPost(props: PropsType) {
 								</span>
 							</div>
 							<div className='ghost-btn flex items-center py-1 pl-2 pr-3'>
-								<CommentIcon />
+								<CommentIcon width={18} height={18} />
 								<span className='ml-1 text-sm'>Add Comment</span>
 							</div>
 						</div>
 						<div className='flex items-center'>
 							<span className='mr-2 text-xs text-gray-600'>3 min read</span>
 							<div className='link p-2'>
-								<BookmarkIcon />
+								<BookmarkIcon width={18} height={18} />
 							</div>
 						</div>
 					</div>

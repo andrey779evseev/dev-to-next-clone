@@ -15,6 +15,8 @@ export const metadata: Metadata = {
 	icons: ['/favicon.ico'],
 }
 
+export const runtime = 'experimental-edge'
+
 export default function RootLayout(props: PropsWithChildren) {
 	const { children } = props
 	return (

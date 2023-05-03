@@ -8,6 +8,12 @@ module.exports = {
 			},
 			boxShadow: {
 				border: '0 0 0 1px ',
+				1: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1)',
+			},
+			zIndex: {
+				tooltip: 500,
+				dropdown: 400,
+				elevate: 1,
 			},
 		},
 		colors: {
@@ -43,7 +49,12 @@ module.exports = {
 				10: '#efefef',
 				0: '#f9f9f9',
 			},
+			reaction: {
+				like: 'rgb( 220, 38, 38 )',
+				comment: 'rgb( 245, 158, 11 )',
+				bookmark: 'rgb( 79, 70, 229 )',
+			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwindcss-animate')],
 }

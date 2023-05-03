@@ -3,6 +3,7 @@ const nextConfig = {
 	experimental: {
 		appDir: true,
 		serverComponentsExternalPackages: ['@prisma/client', 'openid-client'],
+		typedRoutes: true,
 	},
 	images: {
 		remotePatterns: [
