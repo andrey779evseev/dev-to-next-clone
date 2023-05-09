@@ -4,14 +4,8 @@ import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
 import If from '@/components/common/If'
 import { cn } from '@/utils/cn'
 import Link from 'next/link'
-
-const reactions = [
-	'/icons/reactions/fire.svg',
-	'/icons/reactions/raised-hands.svg',
-	'/icons/reactions/exploding-head.svg',
-	'/icons/reactions/unicorn.svg',
-	'/icons/reactions/heart.svg',
-]
+import { reactions } from '@/content/reactions'
+import Tags from '@/components/common/tag/Tags'
 
 type PropsType = {
 	withImage?: boolean
@@ -54,17 +48,7 @@ export default async function FeedPost(props: PropsType) {
 							The importance of rel=canonical for content writers
 						</h2>
 					</Link>
-					<div className='-ml-0.5 mb-2 flex flex-wrap gap-px'>
-						{['seo', 'content', 'contentwriting'].map((tag, i) => (
-							<span
-								key={i}
-								className='cursor-pointer rounded-md p-1 text-sm text-gray-700 transition-all hover:bg-blue/10 hover:text-dark hover:shadow-border hover:shadow-blue/20'
-							>
-								<span className='text-blue'>#</span>
-								{tag}
-							</span>
-						))}
-					</div>
+					<Tags tags={['seo', 'content', 'contentwriting', 'discuss']} />
 					<div className='flex items-center justify-between'>
 						<div className='flex'>
 							<div className='ghost-btn -ml-2 flex items-center py-1 pl-2 pr-3'>

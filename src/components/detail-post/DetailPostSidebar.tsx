@@ -5,34 +5,13 @@ import HoverPopup from '@/components/common/HoverPopup'
 import Tooltip from '@/components/common/Tooltip'
 import Image from 'next/image'
 import MoreIcon from '@/components/common/icons/MoreIcon'
-
-const reactions = [
-	{
-		url: '/icons/reactions/fire.svg',
-		tooltip: 'Fire',
-	},
-	{
-		url: '/icons/reactions/raised-hands.svg',
-		tooltip: 'Raised Hands',
-	},
-	{
-		url: '/icons/reactions/exploding-head.svg',
-		tooltip: 'Exploding Head',
-	},
-	{
-		url: '/icons/reactions/unicorn.svg',
-		tooltip: 'Unicorn',
-	},
-	{
-		url: '/icons/reactions/heart.svg',
-		tooltip: 'Heart',
-	},
-]
+import { reactionsWithTooltip } from '@/content/reactions'
 
 export default function DetailPostSidebar() {
 	return (
 		<aside className='sticky top-[100px] flex flex-col items-center gap-4 self-baseline text-base-80'>
 			<HoverPopup
+				sideOffset={12}
 				trigger={
 					<div>
 						<Tooltip text='Add reaction'>
@@ -45,7 +24,7 @@ export default function DetailPostSidebar() {
 				}
 				content={
 					<div className='z-dropdown flex w-max max-w-[360px] gap-3 rounded-[32px] bg-white p-3 text-dark shadow-1'>
-						{reactions.map((reaction) => (
+						{reactionsWithTooltip.map((reaction) => (
 							<Tooltip text={reaction.tooltip} key={reaction.url}>
 								<button className='flex flex-col items-center rounded-[20px] px-2 pb-1 pt-2 transition-colors hover:bg-gray-100'>
 									<Image
