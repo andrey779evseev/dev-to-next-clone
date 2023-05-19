@@ -1,5 +1,5 @@
-import { getRandomInt } from '@/utils/getRandomInt'
 import { cn } from '@/utils/cn'
+import { getRandomInt } from '@/utils/getRandomInt'
 
 type PropsType = {
 	tag: string

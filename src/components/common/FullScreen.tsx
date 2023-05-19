@@ -1,8 +1,8 @@
 'use client'
 
-import Portal from '@/components/common/Portal'
-import { PropsWithChildren, memo, useEffect, useState } from 'react'
+import { memo, PropsWithChildren, useEffect, useState } from 'react'
 import Image from 'next/image'
+import Portal from '@/components/common/Portal'
 import { cn } from '@/utils/cn'
 import { delay } from '@/utils/delay'
 
@@ -42,7 +42,7 @@ const FullScreen = (props: PropsType) => {
 					onClick={close}
 				>
 					<Image
-						src='/icons/fullscreen/enter-fullscreen.svg'
+						src='/icons/fullscreen/exit-fullscreen.svg'
 						alt='enter-fullscreen'
 						width={20}
 						height={20}

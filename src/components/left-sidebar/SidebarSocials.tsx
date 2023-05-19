@@ -1,9 +1,9 @@
+import Link from 'next/link'
 import FacebookIcon from '@/components/common/icons/socials/FacebookIcon'
 import GithubIcon from '@/components/common/icons/socials/GithubIcon'
 import InstagramIcon from '@/components/common/icons/socials/InstagramIcon'
 import TwitchIcon from '@/components/common/icons/socials/TwitchIcon'
 import TwitterIcon from '@/components/common/icons/socials/TwitterIcon'
-import Link from 'next/link'
 
 const socials = [
 	{

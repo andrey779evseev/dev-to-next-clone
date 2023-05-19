@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import '@/styles/globals.css'
 import { PropsWithChildren } from 'react'
+import { ClerkProvider } from '@clerk/nextjs'
 import { Roboto } from 'next/font/google'
-import { ClerkProvider } from '@clerk/nextjs/app-beta'
 
 const roboto = Roboto({
 	subsets: ['latin'],

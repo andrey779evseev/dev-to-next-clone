@@ -7,7 +7,7 @@ module.exports = {
 				1.5: '1.5px',
 			},
 			boxShadow: {
-				border: '0 0 0 1px ',
+				border: '0 0 0 1px',
 				1: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1)',
 			},
 			zIndex: {
@@ -15,28 +15,6 @@ module.exports = {
 				tooltip: 500,
 				dropdown: 400,
 				elevate: 1,
-			},
-			animation: {
-				'scale-in': 'scale-in 150ms ease-in',
-				'scale-out': 'scale-out 150ms ease-out',
-			},
-			keyframes: {
-				'scale-in': {
-					'0%': {
-						transform: 'scale(0.5)',
-					},
-					'100%': {
-						transform: 'scale(1.0)',
-					},
-				},
-				'scale-out': {
-					'100%': {
-						transform: 'scale(1.0)',
-					},
-					'0%': {
-						transform: 'scale(0.5)',
-					},
-				},
 			},
 			fontFamily: {
 				sans: [

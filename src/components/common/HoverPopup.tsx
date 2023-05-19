@@ -1,8 +1,8 @@
 'use client'
 
 import * as HoverCard from '@radix-ui/react-hover-card'
-import { cn } from '@/utils/cn'
 import ReactNode, { memo } from 'react'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	side?: 'bottom' | 'top' | 'left' | 'right'

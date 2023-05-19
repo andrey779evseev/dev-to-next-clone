@@ -1,7 +1,7 @@
 'use client'
 
-import { cn } from '@/utils/cn'
 import { memo } from 'react'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	value: boolean

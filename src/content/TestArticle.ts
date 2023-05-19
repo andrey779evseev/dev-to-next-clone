@@ -3,6 +3,9 @@ React testing library is one of, if not, the most popular testing libraries ther
 
 ## Accessibility Automation Setup
 
+<u>Gosha</u>
+<ins>Gosha</ins>
+
 When setting up component test cases for accessibility there are essentially two main ways to do it. Using Jest, the most commonly used testing framework with React, we can dive a bit more into them.
 
 The first way to structure it is by including it as part of the entire components test cases (or single 'describe'). This would be grouping the tests all together so that accessibility is just a part of the normal test cases for UI
@@ -90,7 +93,10 @@ On top of using axe-core we can go beyond just checking generically and write sp
 An example of this would be the pressed state of a toggle button being properly set. Let's say I have a button that toggles its state, and it uses aria-pressed attribute. We could write a regression test to check that functionality and ensure it is being properly set in the component.
 
 There many other types of regression that that can be done to ensure accessible functionality. For more information on this please view
+
 [Automated Accessibility part 3: Regression Tests](https://dev.to/steady5063/react-testing-library-accessibility-4fom#:~:text=There%20many%20other%20types%20of%20regression%20that%20that%20can%20be%20done%20to%20ensure%20accessible%20functionality.%20For%20more%20information%20on%20this%20please%20view%20Automated%20Accessibility%20part%203%3A%20Regression%20Tests)
+
+![Test Image](https://res.cloudinary.com/practicaldev/image/fetch/s--rFprBt2P--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://cdn-images-1.medium.com/max/4196/1%2AaGjzqqMOWhedNKdkVRBtBg.png)
 
 ## Conclusion
 

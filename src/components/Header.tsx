@@ -1,9 +1,9 @@
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
-import SearchIcon from './common/icons/SearchIcon'
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs/app-beta'
 import LoginButton from '@/components/auth/LoginButton'
 import RegisterButton from '@/components/auth/RegisterButton'
+import SearchIcon from './common/icons/SearchIcon'
 
 export default async function Header() {
 	return (

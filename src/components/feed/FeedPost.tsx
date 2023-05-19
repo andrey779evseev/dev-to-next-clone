@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import CommentIcon from '@/components/common/icons/CommentIcon'
-import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
-import If from '@/components/common/If'
-import { cn } from '@/utils/cn'
-import Link from 'next/link'
 import { reactions } from '@/content/reactions'
+import Image from 'next/image'
+import Link from 'next/link'
+import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
+import CommentIcon from '@/components/common/icons/CommentIcon'
+import If from '@/components/common/If'
 import Tags from '@/components/common/tag/Tags'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	withImage?: boolean

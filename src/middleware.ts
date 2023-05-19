@@ -1,33 +1,21 @@
-import { getAuth, withClerkMiddleware } from '@clerk/nextjs/server'
-import type { NextRequest } from 'next/server'
+import { authMiddleware } from '@clerk/nextjs'
 import { NextResponse } from 'next/server'
 
-// Set the paths that don't require the user to be signed in
-const publicPaths = ['/login*', '/register*', '/sso-callback*']
-
-const isPublic = (path: string) => {
-	return publicPaths.find((x) =>
-		path.match(new RegExp(`^${x}$`.replace('*$', '($|/)')))
-	)
-}
-
-export default withClerkMiddleware((request: NextRequest) => {
-	if (isPublic(request.nextUrl.pathname)) {
-		return NextResponse.next()
-	}
-	const { userId } = getAuth(request)
-
-	if (!userId) {
-		const signInUrl = new URL('/login', request.url)
-		if (request.nextUrl.pathname !== '/')
-			signInUrl.searchParams.set('redirect_url', request.url)
-		return NextResponse.redirect(signInUrl)
-	} else if (isPublic(request.nextUrl.pathname)) {
-		return NextResponse.redirect(
-			request.nextUrl.searchParams.get('redirect_url') ?? '/'
-		)
-	}
-	return NextResponse.next()
+export default authMiddleware({
+	afterAuth(auth, req) {
+		if (!auth.userId && !auth.isPublicRoute) {
+			const signInUrl = new URL('/login', req.url)
+			signInUrl.searchParams.set('redirect_url', req.url)
+			return NextResponse.redirect(signInUrl)
+		}
+		if (auth.isPublicRoute && !!auth.userId) {
+			return NextResponse.redirect(
+				new URL(req.url).searchParams.get('redirect_url') ??
+					new URL('/', req.url)
+			)
+		}
+	},
+	publicRoutes: ['/login', '/register', '/sso-callback'],
 })
 
 export const config = {

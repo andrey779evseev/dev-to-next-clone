@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	experimental: {
-		appDir: true,
-		serverComponentsExternalPackages: ['@prisma/client', 'openid-client'],
 		typedRoutes: true,
 	},
 	images: {
@@ -12,6 +10,12 @@ const nextConfig = {
 				hostname: 'res.cloudinary.com',
 				port: '',
 				pathname: '/practicaldev/image/fetch/**',
+			},
+			{
+				protocol: 'https',
+				hostname: 'images.clerk.dev',
+				port: '',
+				pathname: '/**',
 			},
 		],
 	},

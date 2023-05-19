@@ -1,5 +1,5 @@
-import { cn } from '@/utils/cn'
 import Tag from '@/components/common/tag/Tag'
+import { cn } from '@/utils/cn'
 
 type PropsType = {
 	tags: string[]

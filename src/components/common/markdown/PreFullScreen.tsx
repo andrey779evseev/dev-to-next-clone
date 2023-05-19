@@ -1,6 +1,6 @@
 'use client'
 
-import { PropsWithChildren, memo, useState } from 'react'
+import { memo, PropsWithChildren, useState } from 'react'
 import Image from 'next/image'
 import FullScreen from '@/components/common/FullScreen'
 

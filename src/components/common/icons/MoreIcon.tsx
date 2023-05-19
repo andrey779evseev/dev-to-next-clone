@@ -1,15 +1,25 @@
-export default function MoreIcon() {
+import { cn } from '@/utils/cn'
+
+type PropsType = {
+	orientation?: 'horizontal' | 'vertical'
+	width?: number
+	height?: number
+}
+
+export default function MoreIcon(props: PropsType) {
+	const { orientation, width = 24, height = 24 } = props
 	return (
 		<svg
 			xmlns='http://www.w3.org/2000/svg'
-			width='24'
-			height='24'
+			width={width}
+			height={height}
 			role='img'
-			aria-labelledby='ab5ys7tk4fyuxxtpe9j96wf0frzqiu2z'
 			aria-hidden='true'
-			className='fill-current'
+			viewBox='0 0 24 24'
+			className={cn('fill-current', {
+				'rotate-90': orientation === 'vertical',
+			})}
 		>
-			<title id='ab5ys7tk4fyuxxtpe9j96wf0frzqiu2z'>More...</title>
 			<path
 				fillRule='evenodd'
 				clipRule='evenodd'

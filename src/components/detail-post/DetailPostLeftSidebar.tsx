@@ -1,13 +1,13 @@
-import HeartWithPlusIcon from '@/components/common/icons/HeartWithPlusIcon'
-import CommentIcon from '@/components/common/icons/CommentIcon'
-import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
-import HoverPopup from '@/components/common/HoverPopup'
-import Tooltip from '@/components/common/Tooltip'
-import Image from 'next/image'
-import MoreIcon from '@/components/common/icons/MoreIcon'
 import { reactionsWithTooltip } from '@/content/reactions'
+import Image from 'next/image'
+import HoverPopup from '@/components/common/HoverPopup'
+import BookmarkIcon from '@/components/common/icons/BookmarkIcon'
+import CommentIcon from '@/components/common/icons/CommentIcon'
+import HeartWithPlusIcon from '@/components/common/icons/HeartWithPlusIcon'
+import MoreIcon from '@/components/common/icons/MoreIcon'
+import Tooltip from '@/components/common/Tooltip'
 
-export default function DetailPostSidebar() {
+export default function DetailLeftPostSidebar() {
 	return (
 		<aside className='sticky top-[100px] flex flex-col items-center gap-4 self-baseline text-base-80'>
 			<HoverPopup

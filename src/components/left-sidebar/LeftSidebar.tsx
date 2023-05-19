@@ -1,10 +1,10 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import LoginButton from '@/components/auth/LoginButton'
 import RegisterButton from '@/components/auth/RegisterButton'
 import NavbarLinks from '@/components/left-sidebar/NavbarLinks'
 import PopularTags from '@/components/left-sidebar/PopularTags'
 import SidebarSocials from '@/components/left-sidebar/SidebarSocials'
-import Image from 'next/image'
-import Link from 'next/link'
 
 export default function LeftSidebar() {
 	return (

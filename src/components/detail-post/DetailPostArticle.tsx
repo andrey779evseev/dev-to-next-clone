@@ -1,8 +1,9 @@
-import Image from 'next/image'
-import { reactions } from '@/content/reactions'
-import Tags from '@/components/common/tag/Tags'
 import { testArticle } from '@/content/TestArticle'
-import Markdown from '@/components/common/markdown/Markdown'
+import { reactions } from '@/content/reactions'
+import Image from 'next/image'
+import { MarkdownServer } from '@/components/common/markdown/Markdown'
+import Tags from '@/components/common/tag/Tags'
+import DetailPostComments from '@/components/detail-post/DetailPostComments'
 
 export default function DetailPostArticle() {
 	return (
@@ -14,6 +15,7 @@ export default function DetailPostArticle() {
 					width={1000}
 					height={400}
 					className='h-auto w-full rounded-t-md'
+					priority
 				/>
 				<div className='px-16 pt-8'>
 					<div className='mb-5 flex items-center'>
@@ -46,8 +48,10 @@ export default function DetailPostArticle() {
 				</div>
 			</header>
 			<div className='break-words px-16 py-8 text-xl font-light'>
-				<Markdown source={testArticle} />
+				<MarkdownServer source={testArticle} />
 			</div>
+			{/* @ts-expect-error */}
+			<DetailPostComments />
 		</article>
 	)
 }
