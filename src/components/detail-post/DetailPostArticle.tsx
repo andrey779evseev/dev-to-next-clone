@@ -7,7 +7,7 @@ import DetailPostComments from '@/components/detail-post/DetailPostComments'
 
 export default function DetailPostArticle() {
 	return (
-		<article className='rounded-md bg-white shadow-border shadow-dark/10'>
+		<article className='card-white'>
 			<header>
 				<Image
 					src='https://res.cloudinary.com/practicaldev/image/fetch/s--E3TH2FH6--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hydpwwjn8abgva0twugq.png'
