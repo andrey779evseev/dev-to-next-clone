@@ -20,7 +20,7 @@ export default function PreClient(props: PropsWithChildren) {
 	if (lines.length === 0)
 		return (
 			<div className='mb-5 flex h-fit w-full justify-center rounded-md bg-syntax-background p-6'>
-				<Spinner />
+				<Spinner color='white' size='big' />
 			</div>
 		)
 

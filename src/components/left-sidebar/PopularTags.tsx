@@ -41,7 +41,7 @@ export default function PopularTags() {
 				{tags.map((tag) => (
 					<Link
 						href={`/t/${tag.slice(1)}`}
-						className='link block px-4 py-2'
+						className='ghost-blue-btn block px-4 py-2 hover:underline'
 						key={tag}
 						prefetch={false}
 					>

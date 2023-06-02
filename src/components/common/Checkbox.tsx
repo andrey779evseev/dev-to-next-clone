@@ -6,14 +6,18 @@ import { cn } from '@/utils/cn'
 type PropsType = {
 	value: boolean
 	setValue: (value: boolean) => void
+	className?: string
 }
 
 const Checkbox = (props: PropsType) => {
-	const { value, setValue } = props
+	const { value, setValue, className } = props
 
 	return (
 		<div
-			className='inline-flex cursor-pointer select-none items-center gap-2 rounded-md px-1 transition-all hover:bg-gray-100 hover:shadow-[0_0_0_4px_] hover:shadow-gray-100'
+			className={cn(
+				'inline-flex cursor-pointer select-none items-center gap-2 rounded-md px-1 transition-all hover:bg-gray-100 hover:shadow-[0_0_0_4px_] hover:shadow-gray-100',
+				className
+			)}
 			onClick={() => setValue(!value)}
 		>
 			<div

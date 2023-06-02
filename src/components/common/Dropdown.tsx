@@ -15,6 +15,7 @@ type PropsType = PropsWithChildren<{
 		name: string
 		description: string
 	}[]
+	title: string
 }>
 
 const Dropdown = (props: PropsType) => {
@@ -23,6 +24,7 @@ const Dropdown = (props: PropsType) => {
 		items,
 		value,
 		onChange,
+		title,
 		sideOffset = 4,
 		side = 'bottom',
 	} = props
@@ -31,9 +33,7 @@ const Dropdown = (props: PropsType) => {
 			trigger={children}
 			content={
 				<div className='card-white w-max min-w-[250px] max-w-[360px] p-4 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),0_4px_6px_-2px_rgba(0,0,0,0.05)]'>
-					<div className='mb-3 text-lg font-bold text-dark'>
-						Sort discussion:{' '}
-					</div>
+					<div className='mb-3 text-lg font-bold text-dark'>{title}</div>
 					<ul>
 						{items.map((item, i) => (
 							<li

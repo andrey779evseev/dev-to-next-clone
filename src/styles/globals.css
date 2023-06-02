@@ -12,11 +12,14 @@
 	.card-white {
 		@apply overflow-hidden rounded-md border border-dark/10 bg-white;
 	}
-	.link {
-		@apply cursor-pointer rounded-md text-gray-700 transition-all hover:bg-blue/10 hover:!text-blue-darker hover:underline;
+	.ghost-blue-btn {
+		@apply cursor-pointer rounded-md text-gray-700 transition-all hover:bg-blue/10 hover:!text-blue-darker;
 	}
-	.ghost-btn {
+	.ghost-gray-btn {
 		@apply w-fit cursor-pointer rounded-md text-base-80 transition-colors hover:bg-black/5 hover:text-base-100;
+	}
+	.primary-outlined-btn {
+		@apply cursor-pointer rounded-md border border-blue text-blue transition-all hover:bg-blue hover:text-white hover:underline;
 	}
 	.list-item-wrapper {
 		@apply cursor-pointer border-b border-gray-100 p-4 transition-colors hover:bg-white;

@@ -11,13 +11,11 @@ export default function RegisterButton(props: PropsType) {
 		<Link
 			href='/register'
 			className={cn(
-				'group cursor-pointer rounded-md border border-blue px-4 py-2 text-center outline-none transition-colors hover:bg-blue',
-				{ 'w-full': full }
+				'primary-outlined-btn px-4 py-2',
+				full ? 'w-full text-center' : 'whitespace-nowrap'
 			)}
 		>
-			<span className='whitespace-nowrap text-blue transition-all group-hover:text-white group-hover:underline'>
-				Create account
-			</span>
+			Create account
 		</Link>
 	)
 }

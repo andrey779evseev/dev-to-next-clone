@@ -10,9 +10,12 @@ export default function LoginButton(props: PropsType) {
 	return (
 		<Link
 			href='/login'
-			className={cn('link border-none px-4 py-2 text-center outline-none', {
-				'w-full': full,
-			})}
+			className={cn(
+				'ghost-blue-btn border-none px-4 py-2 text-center outline-none hover:underline',
+				{
+					'w-full': full,
+				}
+			)}
 		>
 			<span className='whitespace-nowrap'>Log in</span>
 		</Link>

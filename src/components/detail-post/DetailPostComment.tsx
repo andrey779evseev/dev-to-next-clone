@@ -23,9 +23,11 @@ type PropsType = {
 const menuItems: MenuItemType[] = [
 	{
 		title: 'Copy link',
+		type: 'label',
 	},
 	{
 		title: 'Report abuse',
+		type: 'label',
 	},
 ]
 
@@ -113,7 +115,7 @@ const DetailPostComment = (props: PropsType) => {
 									}
 								/>
 								<div className='-ml-1 flex items-center'>
-									<button className='ghost-btn mr-1 p-1'>Randall</button>
+									<button className='ghost-gray-btn mr-1 p-1'>Randall</button>
 									<span className='mr-2 text-base-30'>•</span>
 									<span className='text-sm text-base-60'>May 14</span>
 								</div>
@@ -125,7 +127,7 @@ const DetailPostComment = (props: PropsType) => {
 								<div className='mt-1 flex gap-1'>
 									<button
 										className={cn(
-											'ghost-btn group flex items-center py-1 pl-2 pr-3 text-sm transition-all',
+											'ghost-gray-btn group flex items-center py-1 pl-2 pr-3 text-sm transition-all',
 											{ '!bg-reaction-like/10 !text-reaction-like': isLiked }
 										)}
 										onClick={() => setIsLiked(!isLiked)}
@@ -147,7 +149,7 @@ const DetailPostComment = (props: PropsType) => {
 										</span>
 									) : (
 										<button
-											className='ghost-btn flex items-center py-1 pl-2 pr-3 text-sm'
+											className='ghost-gray-btn flex items-center py-1 pl-2 pr-3 text-sm'
 											onClick={() => setIsReply(true)}
 											type='button'
 										>

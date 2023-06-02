@@ -9,6 +9,7 @@ module.exports = {
 			boxShadow: {
 				border: '0 0 0 1px',
 				1: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1)',
+				2: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.1);',
 			},
 			zIndex: {
 				modal: 500,
@@ -44,6 +45,10 @@ module.exports = {
 			transparent: 'transparent',
 			current: 'currentColor',
 			dark: 'rgb(23, 23, 23)',
+			danger: {
+				DEFAULT: 'rgb(220, 38, 38)',
+				darker: 'rgb(185, 38, 38)',
+			},
 			black: 'rgb(0, 0, 0)',
 			white: 'rgb(255, 255, 255)',
 			gray: {

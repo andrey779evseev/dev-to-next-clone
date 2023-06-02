@@ -1,3 +1,4 @@
+import remarkBreaks from 'remark-breaks'
 import remarkGfm from 'remark-gfm'
 import remarkIns from 'remark-ins'
 import { PropsWithChildren } from 'react'
@@ -29,7 +30,7 @@ const components = {
 		<ol className='mb-5 list-decimal pl-6'>{props.children}</ol>
 	),
 	blockquote: (props: PropsWithChildren) => (
-		<blockquote className='border-l-4 border-base-20 pl-5'>
+		<blockquote className='mb-5 border-l-4 border-base-20 pl-5'>
 			{props.children}
 		</blockquote>
 	),
@@ -64,6 +65,25 @@ export const serverMdxComponents = {
 	),
 }
 
+export const tutorialsMdxComponents = {
+	h4: (props: PropsWithChildren) => (
+		<h4 className='mb-2 text-lg font-medium text-dark'>{props.children}</h4>
+	),
+	a: (props: PropsWithChildren<{ href?: string }>) => (
+		<a href={props.href!} className='text-blue'>
+			{props.children}
+		</a>
+	),
+	code: (props: PropsWithChildren) => (
+		<code className='rounded-md bg-black/10 px-1 py-px text-[13px]'>
+			{props.children}
+		</code>
+	),
+	table: (props: PropsWithChildren) => (
+		<table className='card-white mb-4 mt-2 w-full'>{props.children}</table>
+	),
+}
+
 export const clientMdxComponents = {
 	...components,
 	pre: PreClient,
@@ -76,7 +96,7 @@ export const clientMdxComponents = {
 
 export function MarkdownServer(props: MDXRemoteProps) {
 	return (
-		// @ts-expect-error
+		// @ts-expect-error Server Component
 		<MDXRemote
 			{...props}
 			components={{ ...serverMdxComponents, ...(props.components || {}) }}
@@ -97,7 +117,7 @@ export function MarkdownClient(props: MarkdownClientProps) {
 	const { text, className } = props
 	return (
 		<ReactMarkdown
-			remarkPlugins={[remarkGfm, remarkIns]}
+			remarkPlugins={[remarkBreaks, remarkGfm, remarkIns]}
 			components={clientMdxComponents}
 			className={className}
 		>

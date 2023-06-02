@@ -32,7 +32,11 @@ export default function SidebarSocials() {
 	return (
 		<div className='mb-4 flex'>
 			{socials.map((social, i) => (
-				<Link href={social.link} className='link mx-1 h-10 w-10 p-2' key={i}>
+				<Link
+					href={social.link}
+					className='ghost-blue-btn mx-1 h-10 w-10 p-2 hover:underline'
+					key={i}
+				>
 					{social.icon}
 				</Link>
 			))}

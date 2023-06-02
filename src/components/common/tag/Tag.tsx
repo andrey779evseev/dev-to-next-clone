@@ -33,7 +33,7 @@ export default function Tag(props: PropsType) {
 		<span
 			key={tag}
 			className={cn(
-				'cursor-pointer rounded-md border border-transparent p-1 text-sm text-gray-700 transition-all hover:text-dark',
+				'cursor-pointer rounded-md border border-transparent p-1 text-gray-700 transition-all hover:text-dark',
 				{ 'hover:border-tag-pink/20 hover:bg-tag-pink/10': color === 'pink' },
 				{
 					'hover:border-tag-azure/20 hover:bg-tag-azure/10': color === 'azure',

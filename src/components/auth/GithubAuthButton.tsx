@@ -2,14 +2,16 @@
 
 import { useSignIn } from '@clerk/nextjs'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 
 export default function GithubAuthButton() {
 	const { signIn } = useSignIn()
+	const searchParams = useSearchParams()
 	const signInWithGithub = () => {
 		signIn?.authenticateWithRedirect({
 			strategy: 'oauth_github',
 			redirectUrl: '/sso-callback',
-			redirectUrlComplete: '/',
+			redirectUrlComplete: searchParams.get('redirect_url') ?? '/',
 		})
 	}
 	return (

@@ -107,5 +107,10 @@ React Testing Library is wonderful for creating simple and effective automated t
 * Build a culture of accessibility learning
 * Shape definition of done for a11y
 
+1. Enforce accessible coding practices
+2. Help build the importance of a11y on your dev team
+3. Build a culture of accessibility learning
+4. Shape definition of done for a11y
+
 The only question now is, when will you start adding accessibility test cases?!
 `

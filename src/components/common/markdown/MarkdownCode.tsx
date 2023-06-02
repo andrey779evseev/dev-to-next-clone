@@ -7,7 +7,7 @@ export default function MarkdownCode({ lines }: { lines: Token[][] }) {
 			<code>
 				{lines.length === 0 ? (
 					<div className='flex h-full w-full items-center justify-center'>
-						<Spinner />
+						<Spinner color='white' size='big' />
 					</div>
 				) : (
 					lines.map((line, i) => (

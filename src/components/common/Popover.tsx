@@ -45,6 +45,7 @@ const Popover = (props: PropsType) => {
 						'data-[state=closed]:data-[side=right]:slide-out-to-left-1.5',
 						'z-dropdown duration-100'
 					)}
+					asChild
 				>
 					{content}
 				</PopoverBase.Content>

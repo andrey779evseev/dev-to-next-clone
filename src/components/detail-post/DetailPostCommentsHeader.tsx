@@ -38,8 +38,13 @@ const DetailPostCommentsHeader = (props: PropsType) => {
 				<span className='text-2xl font-bold text-base-90'>
 					Top comments (34)
 				</span>
-				<Dropdown items={dropdownItems} value={sort} onChange={setSort}>
-					<button className='link p-4'>
+				<Dropdown
+					items={dropdownItems}
+					value={sort}
+					onChange={setSort}
+					title='Sort discussion:'
+				>
+					<button className='ghost-blue-btn p-4 hover:underline'>
 						<DropdownIcon />
 					</button>
 				</Dropdown>

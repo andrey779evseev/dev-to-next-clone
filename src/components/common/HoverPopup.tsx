@@ -25,13 +25,14 @@ const HoverPopup = (props: PropsType) => {
 
 	return (
 		<HoverCard.Root closeDelay={closeDelay} openDelay={openDelay}>
-			<HoverCard.Trigger asChild>{trigger}</HoverCard.Trigger>
+			<HoverCard.Trigger asChild>
+				<div className='inline-block'>{trigger}</div>
+			</HoverCard.Trigger>
 			<HoverCard.Portal>
 				<HoverCard.Content
 					side={side}
 					sideOffset={sideOffset}
 					avoidCollisions
-					// eslint-disable-next-line tailwindcss/no-custom-classname
 					className={cn(
 						'data-[state=open]:animate-in data-[state=open]:fade-in',
 						'data-[state=closed]:animate-out data-[state=closed]:fade-out',

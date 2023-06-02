@@ -30,7 +30,7 @@ export default function LoginForm() {
 					onChange={(e) => setPassword(e.target.value)}
 				/>
 			</div>
-			<Checkbox value={remember} setValue={setRemember} />
+			<Checkbox value={remember} setValue={setRemember} className='mb-3' />
 		</>
 	)
 }

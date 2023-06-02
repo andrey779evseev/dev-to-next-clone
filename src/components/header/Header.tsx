@@ -1,15 +1,20 @@
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { currentUser } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 import LoginButton from '@/components/auth/LoginButton'
 import RegisterButton from '@/components/auth/RegisterButton'
-import SearchIcon from './common/icons/SearchIcon'
+import NotificationIcon from '@/components/common/icons/NotificationIcon'
+import HeaderMenu from '@/components/header/HeaderMenu'
+import { toShortUser } from '@/utils/toShortUser'
+import SearchIcon from '../common/icons/SearchIcon'
 
 export default async function Header() {
+	const user = await currentUser()
+
 	return (
 		<header className='fixed inset-x-0 top-0 z-50 h-14 bg-white shadow-[0_1px_1px_rgb(0_0_0_/_10%)]'>
 			<div className='m-auto flex h-14 max-w-[1280px] items-center px-4'>
-				<div className='flex w-full items-center'>
+				<div className='flex flex-1 items-center'>
 					<Link href='/'>
 						<Image
 							src='/logo.svg'
@@ -36,7 +41,7 @@ export default async function Header() {
 							placeholder='Search...'
 						/>
 						<button
-							className='link absolute right-0 top-0 h-full border-none px-2 !text-gray-800 outline-none'
+							className='ghost-blue-btn absolute right-0 top-0 h-full border-none px-2 !text-gray-800 outline-none hover:underline'
 							type='submit'
 							aria-label='Search'
 						>
@@ -44,15 +49,25 @@ export default async function Header() {
 						</button>
 					</form>
 				</div>
-				<SignedOut>
+				{!!user ? (
+					<div className='flex items-center gap-2'>
+						<Link href='/new' className='primary-outlined-btn px-4 py-2'>
+							Create Post
+						</Link>
+						<Link
+							href='/notifications'
+							className='ghost-blue-btn mx-1 p-2 hover:underline'
+						>
+							<NotificationIcon />
+						</Link>
+						<HeaderMenu user={toShortUser(user!)} />
+					</div>
+				) : (
 					<div className='flex items-center gap-2'>
 						<LoginButton />
 						<RegisterButton />
 					</div>
-				</SignedOut>
-				<SignedIn>
-					<UserButton afterSignOutUrl='/login' />
-				</SignedIn>
+				)}
 			</div>
 		</header>
 	)

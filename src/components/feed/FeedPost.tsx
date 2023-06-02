@@ -39,7 +39,7 @@ export default async function FeedPost(props: PropsType) {
 					/>
 				</div>
 				<div>
-					<div className='ghost-btn -ml-1 p-1 text-sm font-medium text-base-80'>
+					<div className='ghost-gray-btn -ml-1 p-1 text-sm font-medium text-base-80'>
 						Nicolas Frankel
 					</div>
 					<div className='mb-2 text-xs text-gray-600'>Apr 13</div>
@@ -51,7 +51,7 @@ export default async function FeedPost(props: PropsType) {
 					<Tags tags={['seo', 'content', 'contentwriting', 'discuss']} />
 					<div className='flex items-center justify-between'>
 						<div className='flex'>
-							<div className='ghost-btn -ml-2 flex items-center py-1 pl-2 pr-3'>
+							<div className='ghost-gray-btn -ml-2 flex items-center py-1 pl-2 pr-3'>
 								<div className='flex' dir='rtl'>
 									{reactions.map((reaction, i) => (
 										<div
@@ -71,14 +71,14 @@ export default async function FeedPost(props: PropsType) {
 									{reactions.length} reactions
 								</span>
 							</div>
-							<div className='ghost-btn flex items-center py-1 pl-2 pr-3'>
+							<div className='ghost-gray-btn flex items-center py-1 pl-2 pr-3'>
 								<CommentIcon width={18} height={18} />
 								<span className='ml-1 text-sm'>Add Comment</span>
 							</div>
 						</div>
 						<div className='flex items-center'>
 							<span className='mr-2 text-xs text-gray-600'>3 min read</span>
-							<div className='link p-2'>
+							<div className='ghost-blue-btn p-2 hover:underline'>
 								<BookmarkIcon width={18} height={18} />
 							</div>
 						</div>
