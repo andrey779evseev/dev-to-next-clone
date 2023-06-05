@@ -96,7 +96,6 @@ export const clientMdxComponents = {
 
 export function MarkdownServer(props: MDXRemoteProps) {
 	return (
-		// @ts-expect-error Server Component
 		<MDXRemote
 			{...props}
 			components={{ ...serverMdxComponents, ...(props.components || {}) }}

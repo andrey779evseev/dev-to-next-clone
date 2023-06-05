@@ -6,7 +6,6 @@ export default function PagesLayout(props: PropsWithChildren) {
 	const { children } = props
 	return (
 		<>
-			{/* @ts-expect-error Server Component */}
 			<Header />
 			<main className='mt-14 bg-gray-100'>{children}</main>
 			<Footer />

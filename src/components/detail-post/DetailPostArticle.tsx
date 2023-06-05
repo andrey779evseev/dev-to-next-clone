@@ -50,7 +50,6 @@ export default function DetailPostArticle() {
 			<div className='break-words px-16 py-8 text-xl font-light'>
 				<MarkdownServer source={testArticle} />
 			</div>
-			{/* @ts-expect-error */}
 			<DetailPostComments />
 		</article>
 	)
