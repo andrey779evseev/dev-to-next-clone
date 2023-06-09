@@ -44,12 +44,12 @@ export default async function FeedPost(props: PropsType) {
 					</div>
 					<div className='mb-2 text-xs text-gray-600'>Apr 13</div>
 					<Link href={`/${'malifor'}/${'first'}`}>
-						<h2 className='mb-1 cursor-pointer text-3xl font-bold text-dark transition-colors hover:text-blue-darker'>
+						<h2 className='mb-2 cursor-pointer text-3xl font-bold text-dark transition-colors hover:text-blue-darker'>
 							The importance of rel=canonical for content writers
 						</h2>
 					</Link>
 					<Tags tags={['seo', 'content', 'contentwriting', 'discuss']} />
-					<div className='flex items-center justify-between'>
+					<div className='mt-2 flex items-center justify-between'>
 						<div className='flex'>
 							<div className='ghost-gray-btn -ml-2 flex items-center py-1 pl-2 pr-3'>
 								<div className='flex' dir='rtl'>

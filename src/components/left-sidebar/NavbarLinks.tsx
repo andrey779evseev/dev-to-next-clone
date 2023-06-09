@@ -4,6 +4,12 @@ const links = {
 	main: [
 		{ image: '/icons/sidebar/home.svg', name: 'Home', link: '' },
 		{
+			image: '/icons/sidebar/readinglist.svg',
+			name: 'Reading List',
+			link: 'readinglist',
+			notifications: 8,
+		},
+		{
 			image: '/icons/sidebar/listings.svg',
 			name: 'Listings',
 			link: 'listings',

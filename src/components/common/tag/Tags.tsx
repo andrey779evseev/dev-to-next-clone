@@ -4,21 +4,24 @@ import { cn } from '@/utils/cn'
 type PropsType = {
 	tags: string[]
 	size?: 'small' | 'big'
+	isGray?: boolean
 }
 
 export default function Tags(props: PropsType) {
-	const { tags, size = 'small' } = props
+	const { tags, size = 'small', isGray = false } = props
 	return (
-		<div
+		<ul
 			className={cn(
-				'-ml-1 mb-2 flex flex-wrap gap-px',
+				'-ml-1 flex flex-wrap gap-px',
 				{ 'text-sm': size === 'small' },
 				{ 'text-base': size === 'big' }
 			)}
 		>
 			{tags.map((tag, i) => (
-				<Tag tag={tag} key={i} />
+				<li key={i}>
+					<Tag tag={tag} isGray={isGray} size={size} />
+				</li>
 			))}
-		</div>
+		</ul>
 	)
 }

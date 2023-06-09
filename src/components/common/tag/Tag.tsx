@@ -1,8 +1,11 @@
+import Link from 'next/link'
 import { cn } from '@/utils/cn'
 import { getRandomInt } from '@/utils/getRandomInt'
 
 type PropsType = {
 	tag: string
+	isGray?: boolean
+	size: 'small' | 'big'
 }
 
 const colors = [
@@ -25,15 +28,17 @@ const colors = [
 ]
 
 export default function Tag(props: PropsType) {
-	const { tag } = props
+	const { tag, size, isGray = false } = props
 
-	const color = colors[getRandomInt(0, colors.length)]
+	const color = isGray ? 'gray' : colors[getRandomInt(0, colors.length)]
 
 	return (
-		<span
-			key={tag}
+		<Link
+			href={`/t/${tag}`}
 			className={cn(
-				'cursor-pointer rounded-md border border-transparent p-1 text-gray-700 transition-all hover:text-dark',
+				'cursor-pointer rounded-md border border-transparent text-gray-700 transition-all hover:text-dark',
+				{ 'p-1': size === 'small' },
+				{ 'px-2 py-1 leading-6': size === 'big' },
 				{ 'hover:border-tag-pink/20 hover:bg-tag-pink/10': color === 'pink' },
 				{
 					'hover:border-tag-azure/20 hover:bg-tag-azure/10': color === 'azure',
@@ -106,6 +111,6 @@ export default function Tag(props: PropsType) {
 				#
 			</span>
 			{tag}
-		</span>
+		</Link>
 	)
 }

@@ -47,7 +47,7 @@ export default function DetailPostArticle() {
 					<Tags tags={['webdev', 'a11y', 'javascript', 'react']} size='big' />
 				</div>
 			</header>
-			<div className='break-words px-16 py-8 text-xl font-light'>
+			<div className='mt-2 break-words px-16 py-8 text-xl font-light'>
 				<MarkdownServer source={testArticle} />
 			</div>
 			<DetailPostComments />
