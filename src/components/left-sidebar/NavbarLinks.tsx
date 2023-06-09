@@ -55,7 +55,7 @@ const links = {
 export default function NavbarLinks() {
 	return (
 		<>
-			<nav className='my-4'>
+			<nav className='mb-4'>
 				<ul className='list-none'>
 					{links.main.map((link) => (
 						<NavbarLink link={link} key={link.name} />

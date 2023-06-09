@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SettingsIcon from '@/components/common/icons/SettingsIcon'
 
 const tags = [
 	'#javascript',
@@ -33,10 +34,15 @@ const tags = [
 	'#datascience',
 ]
 
-export default function PopularTags() {
+export default function MyTags() {
 	return (
 		<nav className='mb-6'>
-			<h2 className='p-2 font-bold text-base-90'>Popular tags</h2>
+			<header className='flex items-center justify-between pl-1'>
+				<h2 className='p-2 font-bold text-base-90'>My tags</h2>
+				<Link href='/dashboard/following_tags' className='ghost-blue-btn p-2'>
+					<SettingsIcon />
+				</Link>
+			</header>
 			<div className='max-h-[42vh] overflow-y-auto'>
 				{tags.map((tag) => (
 					<Link

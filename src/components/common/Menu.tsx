@@ -1,11 +1,21 @@
 import { ReactElement } from 'react'
+import Link from 'next/link'
 import Popover from '@/components/common/Popover'
 
 export type MenuItemType =
 	| {
 			title: string
 			type: 'label'
-			action?: () => void
+	  }
+	| {
+			title: string
+			type: 'button'
+			action: () => void
+	  }
+	| {
+			title: string
+			type: 'link'
+			href: string
 	  }
 	| {
 			type: 'divider'
@@ -14,6 +24,7 @@ export type MenuItemType =
 			type: 'user'
 			title: string
 			description: string
+			href: string
 	  }
 
 type PropsType = {
@@ -35,24 +46,45 @@ export default function Menu(props: PropsType) {
 								return (
 									<li
 										className='ghost-blue-btn px-4 py-2 hover:underline'
-										onClick={item.action}
-										role='button'
 										key={i}
 									>
 										{item.title}
+									</li>
+								)
+							case 'button':
+								return (
+									<li className='ghost-blue-btn' key={i}>
+										<button
+											className='h-full w-full appearance-none border-none px-4 py-2 text-left outline-none hover:underline'
+											onClick={item.action}
+										>
+											{item.title}
+										</button>
+									</li>
+								)
+							case 'link':
+								return (
+									<li
+										className='ghost-blue-btn px-4 py-2 hover:underline'
+										key={i}
+									>
+										<Link href={item.href} className='block h-full w-full'>
+											{item.title}
+										</Link>
 									</li>
 								)
 							case 'divider':
 								return <li className='my-2 border-b border-base-20' key={i} />
 							case 'user':
 								return (
-									<li
-										className='ghost-blue-btn px-4 py-2 hover:underline'
-										role='button'
-										key={i}
-									>
-										<div className='text-base font-medium'>Malifor</div>
-										<div className='text-sm opacity-75'>@malifor</div>
+									<li className='ghost-blue-btn' key={i}>
+										<Link
+											href={item.href}
+											className='block h-full w-full px-4 py-2 hover:underline'
+										>
+											<div className='text-base font-medium'>Malifor</div>
+											<div className='text-sm opacity-75'>@malifor</div>
+										</Link>
 									</li>
 								)
 						}
